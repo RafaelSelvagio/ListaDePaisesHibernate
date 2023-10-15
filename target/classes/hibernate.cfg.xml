@@ -1,0 +1,25 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <!-- Configurações de conexão com o banco de dados -->
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/PrimeiroBanco</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">aluno</property>
+
+        <!-- Dialeto do banco de dados -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Atualizar o banco de dados automaticamente (pode ser útil para desenvolvimento, mas cuidado em produção) -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Mapeamento das classes de modelo (entidades) -->
+        <mapping class="model.Pais" />
+        <!-- Adicione mais mapeamentos conforme necessário -->
+
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,36 @@
+-- Cria o banco de dados "PrimeiroBanco"
+CREATE DATABASE PrimeiroBanco;
+
+-- Usa o banco de dados "PrimeiroBanco"
+USE PrimeiroBanco;
+
+-- Cria a tabela "pais"
+CREATE TABLE pais (
+    nome VARCHAR(255) PRIMARY KEY,
+    capital VARCHAR(255) NOT NULL
+);
+
+-- Insere alguns dados de exemplo
+-- Insere alguns países na tabela "pais"
+INSERT INTO pais (nome, capital) VALUES
+    ('Brasil', 'Brasília'),
+    ('Estados Unidos', 'Washington, D.C.'),
+    ('França', 'Paris'),
+    ('Canadá', 'Ottawa'),
+    ('Austrália', 'Camberra'),
+    ('Japão', 'Tóquio'),
+    ('Rússia', 'Moscou'),
+    ('Índia', 'Nova Deli'),
+    ('China', 'Pequim'),
+    ('Reino Unido', 'Londres'),
+    ('Alemanha', 'Berlim'),
+    ('Itália', 'Roma'),
+    ('Espanha', 'Madri'),
+    ('Portugal', 'Lisboa'),
+    ('Argentina', 'Buenos Aires'),
+    ('México', 'Cidade do México'),
+    ('África do Sul', 'Cidade do Cabo');
+
+
+-- Comita as alterações
+COMMIT;
